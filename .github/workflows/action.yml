@@ -32,5 +32,23 @@ jobs:
        - name: run file
          run: .test.sh
 
+  job-3:
+    runs-on: ubuntu-latest
+    steps:
+
+       - name: print  name
+         env: |
+           LastName: ${{secrets.LAST_NAME }}
+           
+
+         run: |
+            echo $LastName     
+            echo 'Hi ${{ env.FIRST_NAME }}'     
+
+       
          
+
+
+
+
        
