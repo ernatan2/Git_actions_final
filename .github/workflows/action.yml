@@ -24,8 +24,8 @@ jobs:
      runs-on: ubuntu-latest
      steps:
        - name: print files
-         uses: ./
          run: |
+           cd ..
            pwd
            ls -la
            cat 1.txt
