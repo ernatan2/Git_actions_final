@@ -2,7 +2,7 @@ name: Git_Final
 on:
   push:
     branches:
-        -main
+        - main
 
 jobs:
   job-1:
