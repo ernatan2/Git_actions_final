@@ -26,11 +26,13 @@ jobs:
 
        - name: print files
          run: |
-            cat 1.txt
-            cat 2.txt
+           pwd
+           ls -la
+           cat 1.txt
+           cat 2.txt
          
        - name: run file
-         run: .test.sh
+         run: ./test.sh
 
   job-3:
     runs-on: ubuntu-latest
