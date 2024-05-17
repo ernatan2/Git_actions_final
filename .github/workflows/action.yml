@@ -12,7 +12,7 @@ jobs:
       - name: print hello
         run: echo "Hello"
 
-      - name: ubuntu versio
+      - name: ubuntu version
         run: lsb_release -a
 
       - name: print sha
@@ -23,8 +23,8 @@ jobs:
   job-2:
      runs-on: ubuntu-latest
      steps:
-
        - name: print files
+         uses: ./
          run: |
            pwd
            ls -la
