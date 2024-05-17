@@ -40,7 +40,7 @@ jobs:
 
        - name: print  name
          env: |
-           LastName: ${{secrets.LAST_NAME }}
+           LastName: ${{ secrets.LAST_NAME }}
            
 
          run: |
