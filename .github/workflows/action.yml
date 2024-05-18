@@ -23,29 +23,33 @@ jobs:
   job-2:
      runs-on: ubuntu-latest
      steps:
+       - name: checkout
+         uses: actions/checkout@v4
+
        - name: print files
          run: |
-           cd ..
-           pwd
+           pwd0
            ls -la
            cat 1.txt
            cat 2.txt
          
        - name: run file
-         run: ./test.sh
+         run: |
+           chmod +x test.sh
+           ./test.sh
 
   job-3:
     runs-on: ubuntu-latest
     steps:
 
        - name: print  name
-         env: |
-           LastName: ${{ secrets.LAST_NAME }}
-           
-
+         env:
+           PHONE_NUM: ${{ secrets.PHONE_NUM }}
          run: |
-            echo $LastName     
-            echo 'Hi ${{ env.FIRST_NAME }}'     
+           echo " phone number: $(echo $PHONE_NUM | base64 -d)"  
+           echo 'Hi ${{ env.FIRST_NAME }}' 
+           x = "Eropa"
+           echo $x
 
        
          
