@@ -34,16 +34,14 @@ jobs:
   job-3:
     runs-on: ubuntu-latest
     steps:
-       - shell: bash
-         run: |
-          x = "Eropa"
-          echo $x
        - name: print  name
          env:
            PHONE_NUM: ${{ secrets.PHONE_NUM }}
          run: |
-           echo " phone number: $(echo $PHONE_NUM | base64 -d)"  
-           echo "Hi ${{ env.FIRST_NAME }}" 
+           echo "Phone Number: $(echo $PHONE_NUM | base64 -d)"  
+           echo "First Name: ${{ env.FIRST_NAME }}"
+           x = "Eropa"
+          echo "Last Name: $x"
            
 
        
