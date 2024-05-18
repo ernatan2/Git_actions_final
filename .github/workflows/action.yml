@@ -26,13 +26,6 @@ jobs:
        - name: checkout
          uses: actions/checkout@v4
 
-       - name: print files
-         run: |
-           pwd
-           ls -la
-           cat 1.txt
-           cat 2.txt
-         
        - name: run file
          run: |
            chmod +x test.sh
