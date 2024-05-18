@@ -37,7 +37,7 @@ jobs:
        - name: print  name
          env:
            PHONE_NUM: ${{ secrets.PHONE_NUM }}
-           FIRST_NAME: ${{ env.FIRST_NAME }}
+#           FIRST_NAME: ${{ env.FIRST_NAME }}
          run: |
            echo "Phone Number: $(echo $PHONE_NUM | base64 -d)"  
            echo "First Name: $FIRST_NAME"
