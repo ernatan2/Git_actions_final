@@ -39,8 +39,9 @@ jobs:
            PHONE_NUM: ${{ secrets.PHONE_NUM }}
 #           FIRST_NAME: ${{ env.FIRST_NAME }}
          run: |
+           env
            echo "Phone Number: $(echo $PHONE_NUM | base64 -d)"  
-           echo "First Name: $FIRST_NAME"
+           echo "First Name: "$FIRST_NAME
            x="Eropa"
            echo "Last Name: $x"
            
