@@ -35,13 +35,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
        - name: print  name
-         env:
-           PHONE_NUM: ${{ secrets.PHONE_NUM }}
-#           FIRST_NAME: ${{ env.FIRST_NAME }}
          run: |
-           env
-           echo "Phone Number: $(echo $PHONE_NUM | base64 -d)"  
-           echo "First Name: (echo $FIRST_NAME)"
+           echo "Phone Number: $(echo ${{ secrets.PHONE_NUM }} | base64 -d)"  
+           echo "First Name: ${{ vars.FIRST_NAME }}"
            x="Eropa"
            echo "Last Name: $x"
            
