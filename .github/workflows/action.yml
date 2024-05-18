@@ -28,7 +28,7 @@ jobs:
 
        - name: print files
          run: |
-           pwd0
+           pwd
            ls -la
            cat 1.txt
            cat 2.txt
@@ -47,7 +47,7 @@ jobs:
            PHONE_NUM: ${{ secrets.PHONE_NUM }}
          run: |
            echo " phone number: $(echo $PHONE_NUM | base64 -d)"  
-           echo 'Hi ${{ env.FIRST_NAME }}' 
+           echo "Hi ${{ env.FIRST_NAME }}" 
            x = "Eropa"
            echo $x
 
