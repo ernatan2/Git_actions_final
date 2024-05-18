@@ -40,7 +40,7 @@ jobs:
          run: |
            echo "Phone Number: $(echo $PHONE_NUM | base64 -d)"  
            echo "First Name: ${{ env.FIRST_NAME }}"
-           x = "Eropa"
+           x="Eropa"
            echo "Last Name: $x"
            
 
